@@ -1,0 +1,44 @@
+Name: Jacob Feng
+SID: 1591656
+CCID: jfeng4
+CMPUT 275 Wi22
+
+Assignment 2: Navigation System
+
+Included Files:
+	* Makefile
+	* README
+	* map/*.png
+	* client/client.py
+	* server/server.cpp
+	* server/dijkstra.cpp
+	* server/dijkstra.h
+	* server/digraph.cpp
+	* server/wdigraph.h
+	* server/digraph.h
+	* server/Makefile
+	* server/edmonton-roads-2.0.1.txt
+
+Running Instructions:
+	1. Compile and make the 'server' executable by running 'make server' within the soln/server/ directory
+
+	2. Run the 'run' target within the soln/ directory by running 'make run'
+
+	3. A second terminal and a window will appear displaying the map of Edmonton. Click two points on the map to determine the lowest cost distance. Zoom in/out using 'q' and 'e' on the keyboard, and use wasd to move around the map.
+	The terminal displays debugging information.
+
+	4.  Close the window once finished.
+
+Modified files:
+	* server.cpp
+
+Notes and Assumptions:
+	- For the provided edge and vertex data (edmonton-roads-2.0.1.txt by default):
+		- Every vertex must have a unique ID
+		- Vertices in an edge must be declared before the edge
+		- There cannot be any commans in street names or coordinates
+		- Each entry is expected to be separated with a newline
+
+	- The soln/Makefile does not check whether the 'server' executable has been made
+
+	- Program fails if user attempts to manually run the client side program before the server side program
